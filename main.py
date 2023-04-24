@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-@Project: hyperAECoder20230310
-@File:    hyperStream
-@Author:  Jiaqi
+@Project: METERCoder20230310
+@File:    METER
 @Time:    2023/03/10 11:30
-@Description: The hyperStream for Unsupervised Anomaly Detection 
-in a streaming/online manner with the problem of concept drift,
-could be trained under weakly-supervised (anomaly-free) and unsupervised
-hypernetwork + AE = dynamicAE
+@Description: The METER for Unsupervised Anomaly Detection 
+in a streaming/online manner with the problem of concept drift
 """
 
 import torch
