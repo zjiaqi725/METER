@@ -21,7 +21,8 @@ edl-pytorch == 0.0.2
 #### 2.Datasets description  
 We select 14 real-world benchmark datasets from various domains that exhibit different types of concept drift, dimensions, number of data points, and anomaly rates. Four additional synthetic datasets were chosen to simulate different types and durations of concept drift according to the settings in [paper](https://dl.acm.org/doi/abs/10.1145/3534678.3539348). The statistics of the datasets are summarised in the Table below.  
 
-* Real-world datasets: (1) Anomaly detection datasets from the [UCI repository](https://archive.ics.uci.edu/ml/index.php) and [ODDS library](http://odds.cs.stonybrook.edu/), namely Ionosphere (Ion.), Pima, Satellite, Mammography (Mamm.). (2) Multi-aspect datasets of intrusion detection, namely [KDDCUP99 (KDD99)](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html) and [NSL-KDD (NSL)](https://www.unb.ca/cic/datasets/nsl.html).
+* Real-world datasets: (1) Anomaly detection datasets from the [UCI repository](https://archive.ics.uci.edu/ml/index.php) and [ODDS library](http://odds.cs.stonybrook.edu/), namely Ionosphere (Ion.), Pima, Satellite, Mammography (Mamm.). (2) Multi-aspect datasets of intrusion detection, namely [KDDCUP99 (KDD99)](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html) and [NSL-KDD (NSL)](https://www.unb.ca/cic/datasets/nsl.html). (3) Time-series datasets, namely
+NYC taxicab (NYC), CPU utilization (CPU), Machine temperature (M.T.) and Ambient temperature (A.T.) from the [Numenta anomaly detection benchmark (NAB)](https://github.com/numenta/NAB). (4) Real-world streaming datasets [INSECTS](https://sites.google.com/view/uspdsrepository).
 * Synthetic datasets
 
 
