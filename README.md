@@ -23,12 +23,10 @@ We select 14 real-world benchmark datasets from various domains that exhibit dif
 
 * Real-world datasets: (1) Anomaly detection datasets from the [UCI repository](https://archive.ics.uci.edu/ml/index.php) and [ODDS library](http://odds.cs.stonybrook.edu/), namely Ionosphere (Ion.), Pima, Satellite, Mammography (Mamm.). (2) Multi-aspect datasets of intrusion detection, namely [KDDCUP99 (KDD99)](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html) and [NSL-KDD (NSL)](https://www.unb.ca/cic/datasets/nsl.html). (3) Time-series datasets, namely
 NYC taxicab (NYC), CPU utilization (CPU), Machine temperature (M.T.) and Ambient temperature (A.T.) from the [Numenta anomaly detection benchmark (NAB)](https://github.com/numenta/NAB). (4) Real-world streaming datasets [INSECTS](https://sites.google.com/view/uspdsrepository).
-* Synthetic datasets
-
-
+* Synthetic datasets: Four [synthetic datasets](https://www.dropbox.com/sh/a3fhtp9zjjujrwa/AAD_4wkFaULuK-uJinbtw81Oa?dl=0) are created for simulating complex anomaly detection scenarios or data streams. It randomly sets categories as anomaly targets to simulate concepts and sets the duration of each concept randomly to simulate two types of concept drift: "abrupt and recurrent" and "gradual and recurrent".
 
 <img src="https://github.com/zjiaqi725/METER/blob/main/images/Statistical%20information%20of%20datasets.png" width="700" >  
 
-  #### 4.Train and Test the Model  
+#### 4.Train and Test the Model  
 We write both training and evaluation process in the main.py, execute the following command to see the training and evaluation results.  
 `python main.py`
