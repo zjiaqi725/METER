@@ -30,12 +30,13 @@ NYC taxicab (NYC), CPU utilization (CPU), Machine temperature (M.T.) and Ambient
 
 #### 3.Code Running  
 We write both training and evaluation process in the main.py, execute the following command to see the training and evaluation results.  
-`python main.py`
+`python main.py --dataset ionosphere --epochs 1000 --train_rate 0.2 --mode hybrid+edl --thres_rate 0.1`
+
 #### 4.Command line options
 * mode: type of model, one of ["static", "dynamic", "hybrid", "hybrid+edl"]
 * emb_rate: rate of embedding dim to input dim, default=2
 * train_rate: rate of training set, default=0.1
-* epochs: number of epochs, default=2000
+* epochs: number of epochs, default=1000
 * thres_rate: threshold rate for the pseudo labels from SCD, default=0.05
 * uncertainty_threshold: threshold of the concept uncertainty, default=0.1
 * uncertainty_avg_threshold: threshold of the offline updating strategy, default=0.1
