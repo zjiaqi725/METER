@@ -28,9 +28,17 @@ NYC taxicab (NYC), CPU utilization (CPU), Machine temperature (M.T.) and Ambient
 
 <img src="https://github.com/zjiaqi725/METER/blob/main/images/Statistical%20information%20of%20datasets.png" width="700" >  
 
-#### 4.Code Running  
+#### 3.Code Running  
 We write both training and evaluation process in the main.py, execute the following command to see the training and evaluation results.  
 `python main.py`
+#### 4.Command line options
+* mode: type of model, one of ["static", "dynamic", "hybrid", "hybrid+edl"]
+* emb_rate: rate of embedding dim/input dim, default=2
+* train_rate: rate of training set, default=0.1
+* epochs: number of epochs, default=2000
+* thres_rate:fake label, default=0.05
+* uncertainty_threshold: threshold of uncertainty, default=0.1
+* uncertainty_avg_threshold: threshold of uncertainty, default=0.1
 
 ## Acknowledgments
 This project is based on the following open-source projects. We thank their authors for making the source code publicly available.  
