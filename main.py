@@ -49,7 +49,7 @@ parser.add_argument("--emb_rate", type=float, help="rate of embedding dim/input 
 parser.add_argument("--train_rate", type=float, help="rate of training set", default=0.1)
 parser.add_argument("--epochs", type=int, help="number of epochs for ae", default=5000)
 parser.add_argument("--lr", type=float, help="learning rate", default=1e-2)
-parser.add_argument("--dev", help="device", default="cuda")  #cuda:0
+parser.add_argument("--dev", help="device", default="cuda")  
 parser.add_argument("--seed", type=int, help="random seed", default=0)
 #DSD
 parser.add_argument("--encoder_layer", type=int, default=10)
@@ -190,16 +190,8 @@ print('count_dynamic:', count_dy, 'dynamic_routing_rate:', count_dy/len(numeric_
 scores = np.array([i.cpu() for i in err])
 fake_label = np.array([i.cpu() for i in mod])
 data_uncertainty = np.array([i.cpu() for i in data_un])
-# distr_uncertainty = np.array([i.cpu() for i in distr_un])
-if args.dataset == 'conceptdriftdata': 
-    plt.subplot(2, 1, 2)
-    c = np.arange(len(scores))
-    d = scores
-    plt.plot(c, d, color='blue')
-    plt.tick_params(labelsize=14)
-    plt.show()
-else:
-    metrics_dict, y_pred = get_result(args, labels_infer, scores)
+
+metrics_dict, y_pred = get_result(args, labels_infer, scores)
 
 # metrics_dict['dataset shape'] = numeric.shape
 log = list(metrics_dict.items())
