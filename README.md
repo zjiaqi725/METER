@@ -15,6 +15,8 @@ numpy == 1.21.5
 scipy == 1.4.1  
 sklearn == 0.0  
 pandas == 1.0.1  
+hypnettorch == 0.0.4  
+edl-pytorch == 0.0.2
 
 #### 2.Datasets description  
 We evaluate the proposed model on four publicly available datasets: (1)[DREAMER](https://zenodo.org/record/546113/accessrequest) (2)[The Stress Recognition in Automobile Drivers database (DRIVEDB)](https://www.physionet.org/content/drivedb/1.0.0/) (3)[Mahnob-HCI-tagging database (MAHNOB-HCI)](https://mahnob-db.eu/hci-tagging/) (4)[Wearable Stress and Affect Detection (WESAD)](https://ubicomp.eti.uni-siegen.de/home/datasets/icmi18/). Detailed information about the datasets is summarized in the Table below.  
