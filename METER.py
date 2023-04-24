@@ -2,7 +2,6 @@
 """
 Created on Fri Apr 14 04:03:43 2023
 
-@author: jiaqi
 """
 import torch
 import torch.nn as nn
@@ -160,24 +159,7 @@ class METER(nn.Module):
                     self.scheduler_d.step() 
 
             loss_list[epoch] = loss
-        #     if mode == 'hybrid+edl': 
-        #         if (epoch + 1) % int(epochs/10) == 0:
-        #             print(f'epoch:{epoch + 1}\t'
-        #                   f'loss: {loss:0.4f}\t'  
-        #                   f'loss_recon: {np.mean(losses_recon):0.4f}\t'
-        #                   f'loss_edl: {np.mean(losses_edl):0.4f}\t')
-        #     else:
-        #         if (epoch + 1) % int(epochs/10) == 0:
-        #             print(f'epoch:{epoch + 1}\t'
-        #                   f'loss: {loss:0.4f}\t'  
-        #                   f'loss_recon: {np.mean(losses_recon):0.4f}')
-        # #loss curve
-        # plt.figure()
-        # plt.plot(range(0,epochs), loss_list, color="blue", label="loss")
-        # plt.xlabel('epochs')
-        # plt.ylabel('loss function')
-        # # plt.savefig('results/METER_loss_'+ args.dataset +'.png')
-        # plt.close()
+
           
         if mode == 'dynamic':
             return encoder_weight, decoder_weight
