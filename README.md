@@ -1,6 +1,7 @@
 # METER
+This repository contains the code for paper "METER: A Dynamic Concept Adaptation Framework for Online Anomaly Detection".   
  ## Overview 
-This repository contains the code for paper "METER: A Dynamic Concept Adaptation Framework for Online Anomaly Detection". The overall structure of METER is shown in the figure below. The main intuition is that the evolving stream data with different concepts should be identified and measured in for dynamic model evolution.
+The overall structure of METER is shown in the figure below. The main intuition is that the evolving stream data with different concepts should be identified and measured in for dynamic model evolution.
 To achieve this goal, we propose four modules, respectively called Static Concept-aware Detector, Dynamic Shift-aware Detector, Intelligent Switching Controller and Offline Updating Strategy. 
 
 <img src="https://github.com/zjiaqi725/METER/blob/main/images/framework.png" width="900">  
