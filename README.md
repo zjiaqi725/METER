@@ -33,12 +33,12 @@ We write both training and evaluation process in the main.py, execute the follow
 `python main.py`
 #### 4.Command line options
 * mode: type of model, one of ["static", "dynamic", "hybrid", "hybrid+edl"]
-* emb_rate: rate of embedding dim/input dim, default=2
+* emb_rate: rate of embedding dim to input dim, default=2
 * train_rate: rate of training set, default=0.1
 * epochs: number of epochs, default=2000
-* thres_rate:fake label, default=0.05
-* uncertainty_threshold: threshold of uncertainty, default=0.1
-* uncertainty_avg_threshold: threshold of uncertainty, default=0.1
+* thres_rate: threshold rate for the pseudo labels from SCD, default=0.05
+* uncertainty_threshold: threshold of the concept uncertainty, default=0.1
+* uncertainty_avg_threshold: threshold of the offline updating strategy, default=0.1
 
 ## Acknowledgments
 This project is based on the following open-source projects. We thank their authors for making the source code publicly available.  
