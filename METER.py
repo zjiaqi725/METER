@@ -141,12 +141,29 @@ class METER(nn.Module):
                     total_static_loss = self.loss_la(static_output, new).mean(-1) 
                     thres = total_static_loss.reshape(-1,1).sort(0,True)[0][int(len(total_static_loss.reshape(-1,1))*thres_rate)]
                     # print('output.shape:', output.shape)
-                    fake_label = torch.zeros((output.shape[0],output.shape[1],1))  #,output.shape[2]
-                    fake_label = torch.from_numpy(np.array(np.where(total_static_loss>thres, 1, 0),dtype=np.int64))
-                    
-                    pred_dirchlet = self.edl_model(static_output) # new
-                    loss_edl = evidential_classification(pred_dirchlet, fake_label, lamb=lamb) # regularization coefficient 
-                
+                    if epoch <= 100:
+                        fake_label = torch.zeros((output.shape[0],output.shape[1],1))  #,output.shape[2]
+                        fake_label = torch.from_numpy(np.array(np.where(total_static_loss>thres, 1, 0),dtype=np.int64))
+                        pred_dirchlet = self.edl_model(static_output) # new
+                        loss_edl = evidential_classification(pred_dirchlet, fake_label, lamb=lamb) # regularization coefficient 
+                    else:
+                        pred_dirchlet = self.edl_model(static_output)
+                        total_pred_dirchlet = pred_dirchlet.sum(-1, keepdims=True)
+                        expected_p = pred_dirchlet / total_pred_dirchlet
+                        eps = 1e-7
+                        point_entropy = - torch.sum(expected_p * torch.log(expected_p + eps), dim=1)
+                        data_uncertainty = torch.sum((pred_dirchlet/ total_pred_dirchlet) * 
+                                         (torch.digamma(total_pred_dirchlet + 1) - torch.digamma(pred_dirchlet + 1)), dim=1)
+                        # print('data_uncertainty:',data_uncertainty.shape, 'static_output:', static_output.shape)
+                        # print('data_uncertainty:', data_uncertainty)
+                        mu_e = 0.3
+                        thres_e = data_uncertainty.reshape(-1,1).sort(0,True)[0][int(len(data_uncertainty.reshape(-1,1))*mu_e)]
+
+                        fake_label = torch.zeros((static_output[data_uncertainty<=thres_e].shape[0],output.shape[1],1))  #,output.shape[2]
+                        fake_label = torch.from_numpy(np.array(np.where(total_static_loss[data_uncertainty<=thres_e]>thres, 1, 0),dtype=np.int64))
+                        pred_dirchlet = self.edl_model(static_output[data_uncertainty<=thres_e]) # new
+                        loss_edl = evidential_classification(pred_dirchlet, fake_label, lamb=lamb) # regularization coefficient 
+                        
                     loss = loss_recon + loss_edl
                     losses_edl.append(loss_edl.cpu().detach().numpy())
                 else:
