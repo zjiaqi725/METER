@@ -26,7 +26,7 @@ We select 14 real-world benchmark datasets from various domains that exhibit dif
 NYC taxicab (NYC), CPU utilization (CPU), Machine temperature (M.T.) and Ambient temperature (A.T.) from the [Numenta anomaly detection benchmark (NAB)](https://github.com/numenta/NAB). (4) Real-world streaming datasets [INSECTS](https://sites.google.com/view/uspdsrepository).
 * Synthetic datasets: Four [synthetic datasets](https://www.dropbox.com/sh/a3fhtp9zjjujrwa/AAD_4wkFaULuK-uJinbtw81Oa?dl=0) are created for simulating complex anomaly detection scenarios or data streams. It randomly sets categories as anomaly targets to simulate concepts and sets the duration of each concept randomly to simulate two types of concept drift: "abrupt and recurrent" and "gradual and recurrent".
 
-<img src="https://github.com/zjiaqi725/METER/blob/main/images/Statistical%20information%20of%20datasets.png" width="700" >  
+<img src="https://github.com/zjiaqi725/METER/blob/main/images/Dataset%20statistics.png" width="700" >  
 
 #### 3.Code Running  
 We write both training and evaluation process in the main.py, execute the following command to see the training and evaluation results.  
