@@ -12,10 +12,6 @@ To achieve this goal, we propose four modules, respectively called Static Concep
 #### 1.Environment  
 pytorch == 1.5.1  
 python == 3.7.6  
-numpy == 1.21.5  
-scipy == 1.4.1  
-sklearn == 0.0  
-pandas == 1.0.1  
 hypnettorch == 0.0.4  
 edl-pytorch == 0.0.2  
 
