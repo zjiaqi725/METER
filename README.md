@@ -39,7 +39,7 @@ We write both training and evaluation process in the main.py, execute the follow
 
 ## Citation
 Read our [paper](https://www.vldb.org/pvldb/vol17/p794-zhu.pdf) for more information. If you use our method, please cite us using
-''' bash
+```bash
 @article{zhu2023meter,
   title={METER: A Dynamic Concept Adaptation Framework for Online Anomaly Detection},
   author={Zhu, Jiaqi and Cai, Shaofeng and Deng, Fang and Ooi, Beng Chin and Zhang, Wenqiao},
@@ -50,7 +50,7 @@ Read our [paper](https://www.vldb.org/pvldb/vol17/p794-zhu.pdf) for more informa
   year={2023},
   publisher={VLDB Endowment}
 }
-'''
+```
 
 ## Acknowledgments
 This project is based on the following open-source projects. We thank their authors for making the source code publicly available.  
