@@ -37,6 +37,21 @@ We write both training and evaluation process in the main.py, execute the follow
 * uncertainty_threshold: threshold of the concept uncertainty, default=0.1
 * uncertainty_avg_threshold: threshold of the offline updating strategy, default=0.1
 
+## Citation
+Read our [paper](https://www.vldb.org/pvldb/vol17/p794-zhu.pdf) for more information. If you use our method, please cite us using
+''' bash
+@article{zhu2023meter,
+  title={METER: A Dynamic Concept Adaptation Framework for Online Anomaly Detection},
+  author={Zhu, Jiaqi and Cai, Shaofeng and Deng, Fang and Ooi, Beng Chin and Zhang, Wenqiao},
+  journal={Proceedings of the VLDB Endowment},
+  volume={17},
+  number={4},
+  pages={794--807},
+  year={2023},
+  publisher={VLDB Endowment}
+}
+'''
+
 ## Acknowledgments
 This project is based on the following open-source projects. We thank their authors for making the source code publicly available.  
 * [Hypernetworks](https://github.com/chrhenning/hypnettorch)
